@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Корзина — Baudet</title>
+<meta name="description" content="Корзина и оформление заказа Baudet.">
+<meta property="og:title" content="Корзина — Baudet">
+<meta property="og:description" content="Корзина и оформление заказа Baudet.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Onest:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="cart">
+<div id="boot-msg" style="font:16px/1.6 Arial,sans-serif;max-width:640px;margin:40px auto;padding:24px;border:2px solid #e5231b;color:#111;background:#fff">
+<b>Сайт открылся не полностью.</b><br>
+Скорее всего, файл открыт прямо из письма или из архива. Сделайте так:<br>
+1) сохраните архив на компьютер;<br>
+2) Windows: правый клик по архиву → «Извлечь все…» → «Извлечь»; Mac: двойной клик;<br>
+3) в распакованной папке откройте index.html двойным кликом.
+</div>
+<div id="header"></div>
+<main>
+<div id="cart-wrap">
+<div class="page-head"><span class="label">оформление заказа</span><h1>корзина</h1></div>
+<div class="done" id="cart-empty" hidden>
+  <p>В корзине пока ничего нет.</p>
+  <a class="btn btn--ghost" href="catalog.html">перейти в каталог</a>
+</div>
+<div class="cart" id="cart" hidden>
+  <div>
+    <div id="cart-list"></div>
+    <div class="totals" id="totals"></div>
+  </div>
+  <form class="form" id="order" novalidate>
+    <h2>получатель</h2>
+    <label class="field"><span class="label">имя и фамилия *</span><input id="f-name" name="name" autocomplete="name" required></label>
+    <label class="field"><span class="label">телефон *</span><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7" required></label>
+    <label class="field"><span class="label">e-mail</span><input id="f-email" name="email" type="email" autocomplete="email"></label>
+    <h2 style="margin-top:18px">доставка</h2>
+    <div class="radios">
+      <label class="radio"><input type="radio" name="delivery" value="Курьер" checked> курьером до двери, 1–2 дня</label>
+      <label class="radio"><input type="radio" name="delivery" value="Пункт выдачи"> в пункт выдачи или постамат, 1–2 дня</label>
+    </div>
+    <label class="field"><span class="label">город *</span><input id="f-city" name="city" autocomplete="address-level2" required></label>
+    <label class="field"><span class="label">адрес или пункт выдачи</span><input id="f-address" name="address" autocomplete="street-address"></label>
+    <h2 style="margin-top:18px">оплата</h2>
+    <div class="radios">
+      <label class="radio"><input type="radio" name="payment" value="При получении" checked> при получении — картой или наличными</label>
+      <label class="radio"><input type="radio" name="payment" value="Онлайн картой"> картой онлайн — пришлём ссылку на оплату после подтверждения</label>
+    </div>
+    <label class="field"><span class="label">комментарий</span><textarea id="f-comment" name="comment" rows="2"></textarea></label>
+    <label class="consent"><input type="checkbox" name="agree" id="f-agree"> <span>Согласен на обработку персональных данных по <a href="privacy.html">политике конфиденциальности</a></span></label>
+    <button class="btn" id="order-btn" type="submit">оформить заказ</button>
+    <p class="form__msg" id="order-msg" aria-live="polite"></p>
+  </form>
+</div>
+</div>
+</main>
+<div id="footer"></div>
+<script src="assets/config.js"></script>
+<script src="assets/products.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

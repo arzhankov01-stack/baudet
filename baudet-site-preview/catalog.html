@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Чемоданы — Baudet</title>
+<meta name="description" content="Каталог чемоданов Baudet: фильтр по размеру, материалу и цвету.">
+<meta property="og:title" content="Чемоданы — Baudet">
+<meta property="og:description" content="Каталог чемоданов Baudet: фильтр по размеру, материалу и цвету.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Onest:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="catalog">
+<div id="boot-msg" style="font:16px/1.6 Arial,sans-serif;max-width:640px;margin:40px auto;padding:24px;border:2px solid #e5231b;color:#111;background:#fff">
+<b>Сайт открылся не полностью.</b><br>
+Скорее всего, файл открыт прямо из письма или из архива. Сделайте так:<br>
+1) сохраните архив на компьютер;<br>
+2) Windows: правый клик по архиву → «Извлечь все…» → «Извлечь»; Mac: двойной клик;<br>
+3) в распакованной папке откройте index.html двойным кликом.
+</div>
+<div id="header"></div>
+<main>
+<div class="page-head">
+  <span class="label" id="cat-count"></span>
+  <h1 id="cat-title">все чемоданы</h1>
+</div>
+<div class="filters" id="filters" role="toolbar" aria-label="Фильтры"></div>
+<div class="grid" id="grid"></div>
+<div class="empty" id="empty" hidden>Под эти фильтры ничего не нашлось. <button class="link-all" id="reset">сбросить фильтры</button></div>
+<div style="height:72px"></div>
+</main>
+<div id="footer"></div>
+<script src="assets/config.js"></script>
+<script src="assets/products.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
